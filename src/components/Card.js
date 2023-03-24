@@ -24,6 +24,7 @@ function Card(){
         <input type="text" name="name" value={name} placeholder="name..." onChange={handleChange}/>
         <button type="submit">Enter</button>
         </form>
+        <h2 className="output">Your name is {age} and you are {name} years old!!!</h2>
     </div>)
 }
 
