@@ -2,20 +2,22 @@ import { useState } from "react"
 import "../styles/Card.scss"
 
 function Card(){
-    const [formData,setFrom] = useState({
+    const [formData,setForm] = useState({
         age: "",
         name:""
     })
+    const [isOn, setIsOn] = useState(false)
     const {age, name} = formData
 
     function handleChange(e){
         let name = e.target.name
         let value = e.target.value
-        setFrom({...formData,[name]:value})
+        setForm({...formData,[name]:value})
     }
-
+    
     function handleSubmit(e){
         e.preventDefault()
+        setIsOn(true)
         console.log(name, age)
     }
 
@@ -26,7 +28,7 @@ function Card(){
         name:<input type="text" name="name" value={name} placeholder="name..." onChange={handleChange}/>
         <button type="submit">Enter</button>
         </form>
-        <h2 className="output">Your name is {age} and you are {name} years old!!!</h2>
+        {isOn ?<h2 className="display">Your name is {age} and you are {name} years old!!!</h2>: null}
     </div>)
 }
 
