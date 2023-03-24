@@ -1,0 +1,21 @@
+.Card{
+    min-width: 30vw;
+    aspect-ratio: 3/5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid hsla(0,0%,100%,.2);
+    border-radius: 10px 10px 10px 10px ;
+    border-color: #4e4e4e;
+    background-color: #f8f8f8;
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 5rem;
+        align-items: center;
+    }
+    .output{
+        font-size: medium;
+        padding-top: 20%;
+    }
+}
